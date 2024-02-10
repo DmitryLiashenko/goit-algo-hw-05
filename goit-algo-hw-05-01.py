@@ -11,12 +11,8 @@ def caching_fibonacci():        # СОЗДАЕМ ФУНКЦИЮ
             if n in cache:      # ЕСЛИ ОТВЕТ УЖЕ ЕСТЬ В КЕШ
                 return cache[n] # ДОСТАЕМ ЧИСЛО ПО КЛЮЧУ
             else:               # ЕСЛИ НЕТУ ЧИСЛА, ВЫЧИСЛЯЕМ ПО ФОРМУЛЕ
-                cache[n] = fibonacci(n - 1) + fibonacci(n - 2) #
+                cache[n] = fibonacci(n - 1) + fibonacci(n - 2) 
                 return cache[n]                                # ВОЗВРАЩАЕМ В КЕШ
         return fibonacci                                       # ВОЗВРАЩАЕМ ФУНКЦИЮ В ФУНКЦИЮ
     except Exception as Error:                                 # КОНЕЦ БЛОКА ОШИБОК
         print(f'Somthing wrong {Error}')                       # СООБЩАЕМ КАКАЯ ОШИБКА
-
-fib = caching_fibonacci()       # ТЕСТ 
-print(fib(10))                  # ОЖИДАЕМ 55
-print(fib(15))                  # ОЖИДАЕМ 610
