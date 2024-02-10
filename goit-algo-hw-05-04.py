@@ -41,8 +41,11 @@ def show_phone(args, contacts):         # ФУНКЦИЯ ПОКАЗЫВАЕТ Т
         else:
             return "No found"           # ВОЗВРАЩАЕМ НЕ НАЙДЕНО ЕСЛИ ИМЕНИ НЕТ В КОНТАКАХ
 
-def show_all(contacts=None):            # ФУНКЦИЯ ВЫВОДИТ ВСЕ КОНТАКТЫ В СЛОВАРЕ(ДОБАВИТЬ \n)
-    return contacts                     # ВОЗВРАЩАЕМ СЛОВАРЬ В ФУНКЦИЮ
+def show_all(contacts=None):
+    s = ''                                         # ОБЪЯВЛЯЕМ ПУСТУЮ СТРОКУ s
+    for key in contacts:                           # ИТЕРИРУЕМ СЛОВАРЬ
+        s+=(f"{key:10} : {contacts[key]:10}\n")    # ФУНКЦИЯ ВЫВОДИТ ВСЕ КОНТАКТЫ В СЛОВАРЕ(ДОБАВИТЬ \n)(странная реализация \n)
+    return s                                       # ВОЗВРАЩАЕМ СЛОВАРЬ В ФУНКЦИЮ
 
 
 def main():                                        # ОСНОВНАЯ ФУНКЦИЯ 
