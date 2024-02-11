@@ -1,3 +1,5 @@
+# Можно было сделать как преподаватель, но хотел от из Своей головы)) согласно стандарту PEP8 - больше текста чем кода :-)))
+
 import re
 from typing import Callable
 from functools import reduce
